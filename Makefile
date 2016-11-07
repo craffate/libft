@@ -6,7 +6,7 @@
 #    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/11/07 16:36:53 by craffate         ###   ########.fr        #
+#    Updated: 2016/11/07 19:31:33 by craffate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,12 @@ SRCS		=	ft_memset.c \
 				ft_strdel.c \
 				ft_strclr.c \
 				ft_striter.c \
-				ft_striteri.c
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putnbr.c \
+				ft_putnbr_fd.c \
+				ft_putendl_fd.c
 
 OBJS		=	$(SRCS:.c=.o)
 
