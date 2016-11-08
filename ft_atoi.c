@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:06:22 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/07 15:02:53 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/08 17:24:24 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_atoi(const char *str)
 {
 	size_t		i;
 	size_t		j;
-	int		k;
+	int			k;
 
 	i = 0;
 	j = 0;

@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/08 14:30:46 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/08 14:44:47 by craffate         ###   ########.fr       */
+/*   Created: 2016/11/08 17:29:53 by craffate          #+#    #+#             */
+/*   Updated: 2016/11/08 17:32:46 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+void	ft_putendl(char const *s)
 {
-	char	*s2;
-	size_t	i;
-
-	s2 = (malloc(sizeof(char) * ft_strlen(s) + 1));
-	i = 0;
-	if (!s2)
-		return (NULL);
-	while (s[i])
-	{
-		s2[i] = f(s[i]);
-		i++;
-	}
-	s2[i] = '\0';
-	return (s2);
+	ft_putstr(s);
+	ft_putchar('\n');
 }
