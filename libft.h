@@ -60,5 +60,8 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char const *s, int fd);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
 #endif
