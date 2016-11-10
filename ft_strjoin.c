@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 22:59:48 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/10 18:24:57 by craffate         ###   ########.fr       */
+/*   Created: 2016/11/09 17:14:56 by craffate          #+#    #+#             */
+/*   Updated: 2016/11/09 17:23:52 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
-	size_t	j;
-	size_t	k;
+	char	*s3;
 
 	i = 0;
-	j = 0;
-	if (!little[0])
-		return ((char *)big);
-	while (big[i])
-	{
-		j = 0;
-		k = i;
-		while (big[k] == little[j])
-		{
-			j++;
-			k++;
-			if (little[j] == '\0')
-				return (&((char *)big)[i]);
-		}
-		i++;
-	}
-	return (NULL);
+	s3 = (char *)(malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1)));
+	if (!s3)
+		return (NULL);
+	while (*s1)
+		s3[i++] = *s1++;
+	while (*s2)
+		s3[i++] = *s2++;
+	s3[i] = '\0';
+	return (*&s3);
 }
