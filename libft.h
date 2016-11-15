@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/10 15:38:59 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/14 23:58:47 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_putendl(char const *s);
 char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_strtrim(char const *s);
+char		*ft_itoa(int n);
 
 #endif
