@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 09:41:08 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/16 13:54:03 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 22:44:39 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,13 @@ static size_t	ft_wordscounter(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (*s)
-	{
-		if (j == 0 && *s != c)
-		{
-			j = 1;
+	if (!s)
+		return (0);
+	while (s[j++])
+		if (s[j] == c && s[j + 1] != c)
 			i++;
-		}
-		else if (j == 1 && *s == c)
-			j = 0;
-		s++;
-	}
+	if (s[0] != '\0')
+		i++;
 	return (i);
 }
 
@@ -62,11 +58,11 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	j = 0;
 	words = ft_wordscounter(s, c);
-	i = 0;
 	if (!(arr = (char **)malloc(sizeof(char *) * words)))
 		return (NULL);
+	i = 0;
+	j = 0;
 	while (s[i] == c && s[i])
 		i++;
 	while (j < words && s[i])
