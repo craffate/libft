@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 09:41:08 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/16 22:44:39 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/17 00:20:06 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char		*ft_elements(char const *s, char c, size_t *i)
 	size_t	j;
 
 	j = 0;
-	if (!(w = (char *)malloc(sizeof(char) * ft_strlen(s))))
+	if (!(w = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
 	while (s[*i] != c && s[*i])
 	{
@@ -59,7 +59,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = ft_wordscounter(s, c);
-	if (!(arr = (char **)malloc(sizeof(char *) * words)))
+	if (!(arr = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
