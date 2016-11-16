@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/15 02:30:37 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:39:05 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void		ft_putendl_fd(char const *s, int fd);
 int			ft_strequ(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_putendl(char const *s);
 char		*ft_strjoin(char const *s1, char const *s2);
@@ -72,5 +73,9 @@ char		*ft_strtrim(char const *s);
 char		*ft_strtrim(char const *s);
 int			ft_absval(int n);
 int			ft_factorial(int n);
+char		**ft_strsplit(char const *s, char c);
+int			ft_tolower(int c);
+int			ft_toupper(int c);
+int			ft_returnking(void);
 
 #endif

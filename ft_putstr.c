@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:17:38 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/05 12:22:04 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 11:37:15 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar(*s++);
 }

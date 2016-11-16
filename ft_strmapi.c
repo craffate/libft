@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:17:03 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/08 17:25:36 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:38:02 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*s2;
 	size_t	i;
 
-	s2 = (malloc(sizeof(char) * ft_strlen(s) + 1));
-	i = 0;
-	if (!s2)
+	if (!s)
 		return (NULL);
+	if (!(s2 = (malloc(sizeof(char) * ft_strlen(s) + 1))))
+		return (NULL);
+	i = 0;
 	while (s[i])
 	{
 		s2[i] = f(i, s[i]);

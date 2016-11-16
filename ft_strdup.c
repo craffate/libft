@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 19:27:18 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/04 17:31:43 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 07:43:23 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*arr;
 
 	i = 0;
-	arr = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
-	if (arr == NULL)
+	if (!(arr = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1)))
 		return (NULL);
 	while (s1[i])
 	{

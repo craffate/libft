@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 14:28:33 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/15 01:59:46 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:37:54 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*s2;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	if (!(s2 = (char *)(malloc(sizeof(char) * len + 1))))
 		return (NULL);
