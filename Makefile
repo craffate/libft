@@ -6,7 +6,7 @@
 #    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/11/16 21:52:07 by craffate         ###   ########.fr        #
+#    Updated: 2016/11/19 07:47:52 by craffate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,10 +86,12 @@ $(NAME):
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJS:srcs/%=%)
+	rm -f $(OBJS)
 	rm -f $(INCS)/libft.gch
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
+
+.PHONY: clean fclean re
