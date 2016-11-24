@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:06:22 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/17 18:57:11 by craffate         ###   ########.fr       */
+/*   Updated: 2016/11/24 22:09:11 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	size_t		i;
-	size_t		j;
-	int			k;
+	unsigned int	i;
+	unsigned int	j;
+	int				k;
 
 	i = 0;
 	j = 0;
@@ -25,10 +25,10 @@ int		ft_atoi(const char *str)
 		return (0);
 	while (ft_isspace(str[i]) == 1)
 		i++;
-	if (str[i] == 45)
+	if (str[i] == '-')
 		k = -1;
-	i = (str[i] == 45 || str[i] == 43) ? i + 1 : i;
-	while (str[i] >= 48 && str[i] <= 57)
+	i = (str[i] == '-' || str[i] == '+') ? i + 1 : i;
+	while (str[i] >= '0' && str[i] <= '9')
 		j = j * 10 + str[i++] - '0';
 	return (k * j);
 }
