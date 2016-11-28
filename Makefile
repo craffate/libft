@@ -6,7 +6,7 @@
 #    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/11/19 07:47:52 by craffate         ###   ########.fr        #
+#    Updated: 2016/11/28 19:29:04 by craffate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ SRCS		=	ft_memset.c \
 
 OBJS		=	$(SRCS:.c=.o)
 
-INCS		=	.
+INCS		=	./includes
 
 all: $(NAME)
 
