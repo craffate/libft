@@ -6,15 +6,17 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/19 06:54:57 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:52:09 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <limits.h>
 
 typedef struct		s_list
 {

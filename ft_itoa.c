@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 23:52:17 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/15 01:16:59 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:52:31 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char			*ft_itoa(int n)
 	int		neg;
 
 	neg = 0;
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	i = ft_getsize(n) + 1;
 	if (!(s = (char *)(malloc(sizeof(char) * i + 1))))

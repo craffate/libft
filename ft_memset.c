@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:44:45 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/07 17:36:44 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 17:02:24 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int		i;
+	unsigned int	i;
 
 	i = 0;
 	while (len--)

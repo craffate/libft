@@ -6,7 +6,7 @@
 #    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/11/28 19:29:04 by craffate         ###   ########.fr        #
+#    Updated: 2016/12/03 16:51:22 by craffate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,10 +80,12 @@ INCS		=	./includes
 
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Werror -Wextra -c $(SRCS) -I$(INCS)
+$(NAME): $(OBJS)
 	ar -rc $(NAME) $(OBJS)
 	ranlib $(NAME)
+
+%.o: %.c
+	gcc -o $@ -c $< -Wall -Werror -Wextra -I$(INCS)
 
 clean:
 	rm -f $(OBJS)

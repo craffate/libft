@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 09:41:08 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/17 00:20:06 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 17:02:55 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	ft_wordscounter(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
@@ -29,10 +29,10 @@ static size_t	ft_wordscounter(char const *s, char c)
 	return (i);
 }
 
-static char		*ft_elements(char const *s, char c, size_t *i)
+static char		*ft_elements(char const *s, char c, unsigned int *i)
 {
-	char	*w;
-	size_t	j;
+	char			*w;
+	unsigned int	j;
 
 	j = 0;
 	if (!(w = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
@@ -51,10 +51,10 @@ static char		*ft_elements(char const *s, char c, size_t *i)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char	**arr;
-	size_t	words;
-	size_t	i;
-	size_t	j;
+	char			**arr;
+	unsigned int	words;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (!s)
 		return (NULL);

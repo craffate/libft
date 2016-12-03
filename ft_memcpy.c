@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:54:02 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/04 16:54:00 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:55:21 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
+	unsigned int	i;
 
 	i = 0;
 	while (n > 0)

@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:19:42 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/07 18:33:55 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:58:36 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*s;
-	size_t	i;
+	char			*s;
+	unsigned int	i;
 
-	s = (char *)(malloc(sizeof(char) * (size + 1)));
-	i = 0;
-	if (!s)
+	if (!(s = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
+	i = 0;
 	s[size] = '\0';
 	while (i < size)
 		s[i++] = '\0';

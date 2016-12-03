@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 01:19:49 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/16 12:37:45 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 17:01:59 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static int	ft_blankcheck(int c)
 
 char		*ft_strtrim(char const *s)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	*s2;
+	unsigned int	i;
+	size_t			j;
+	unsigned int	k;
+	char			*s2;
 
 	if (!s)
 		return (NULL);

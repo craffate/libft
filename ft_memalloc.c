@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:07:24 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/19 06:57:59 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:53:40 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void				*ptr;
+	void	*ptr;
 
 	if (!(ptr = malloc(size)))
 		return (NULL);

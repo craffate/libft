@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 19:14:26 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/06 14:00:38 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:55:47 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t		i;
+	unsigned int	i;
 
 	i = 0;
 	if (dst > src)

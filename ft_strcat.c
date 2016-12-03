@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 19:44:48 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/09 17:23:53 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 16:56:47 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int		i;
+	size_t	i;
 
 	i = ft_strlen(s1);
 	while (*s2)

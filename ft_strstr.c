@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 22:59:48 by craffate          #+#    #+#             */
-/*   Updated: 2016/11/10 18:24:57 by craffate         ###   ########.fr       */
+/*   Updated: 2016/12/03 17:01:04 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strstr(const char *big, const char *little)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
 
 	i = 0;
 	j = 0;
