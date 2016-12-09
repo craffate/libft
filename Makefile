@@ -76,7 +76,7 @@ SRCS		=	ft_memset.c \
 
 OBJS		=	$(SRCS:.c=.o)
 
-INCS		=	./includes
+INCS		=	.
 
 all: $(NAME)
 
