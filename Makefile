@@ -6,7 +6,7 @@
 #    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/12/03 16:51:22 by craffate         ###   ########.fr        #
+#    Updated: 2016/12/18 05:53:01 by craffate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,8 @@ SRCS		=	ft_memset.c \
 				ft_lstdel.c \
 				ft_lstadd.c \
 				ft_lstiter.c \
-				ft_lstmap.c
+				ft_lstmap.c \
+				ft_itoa_base.c
 
 OBJS		=	$(SRCS:.c=.o)
 
