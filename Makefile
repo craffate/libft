@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2016/12/18 05:53:01 by craffate         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME		=	libft.a
 
 SRCS		=	ft_memset.c \
@@ -75,26 +63,31 @@ SRCS		=	ft_memset.c \
 				ft_lstmap.c \
 				ft_itoa_base.c
 
-OBJS		=	$(SRCS:.c=.o)
+OBJS		=	$(addprefix srcs/, $(SRCS:.c=.o))
 
-INCS		=	.
+INCS		=	./includes
+
+CC			=	clang
+
+FLAGS		=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar -rcs $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "[Compiling $(NAME)]"
 
-%.o: %.c
-	gcc -o $@ -c $< -Wall -Werror -Wextra -I$(INCS)
+srcs/%.o: srcs/%.c
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+	@echo "[Converting $@]"
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(INCS)/libft.gch
+	@rm -f $(OBJS)
+	@echo "[Cleaning folders]"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "[Fully cleaning folders]"
 
-re: fclean $(NAME)
-
-.PHONY: clean fclean re
+re: fclean all
