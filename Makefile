@@ -63,7 +63,11 @@ SRCS		=	ft_memset.c \
 				ft_lstmap.c \
 				ft_itoa_base.c
 
+GNL_SRCS	=	get_next_line.c
+
 OBJS		=	$(addprefix srcs/, $(SRCS:.c=.o))
+
+GNL_OBJS	=	$(addprefix get_next_line/, $(GNL_SRCS:.c=.o))
 
 INCS		=	./includes
 
@@ -73,21 +77,25 @@ FLAGS		=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@ar -rcs $(NAME) $(OBJS)
-	@ranlib $(NAME)
+$(NAME): $(OBJS) $(GNL_OBJS)
 	@echo "[Compiling $(NAME)]"
+	@ar -rcs $(NAME) $(OBJS) $(GNL_OBJS)
+	@ranlib $(NAME)
 
 srcs/%.o: srcs/%.c
-	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 	@echo "[Converting $@]"
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+
+get_next_line/%.o: get_next_line/%.c
+	@echo "[Converting $@]"
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
 clean:
-	@rm -f $(OBJS)
 	@echo "[Cleaning folders]"
+	@rm -f $(OBJS) $(GNL_OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
 	@echo "[Fully cleaning folders]"
+	@rm -f $(NAME)
 
 re: fclean all
