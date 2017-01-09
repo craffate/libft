@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: craffate <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/11/04 15:11:17 by craffate          #+#    #+#              #
-#    Updated: 2017/01/09 12:45:11 by craffate         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME		=	libft.a
 
 SRCS		=	ft_memset.c \
@@ -77,26 +65,39 @@ SRCS		=	ft_memset.c \
 				ft_putwchar.c \
 				ft_putwstr.c
 
-OBJS		=	$(SRCS:.c=.o)
+GNL_SRCS	=	get_next_line.c
 
-INCS		=	.
+OBJS		=	$(addprefix srcs/, $(SRCS:.c=.o))
+
+GNL_OBJS	=	$(addprefix get_next_line/, $(GNL_SRCS:.c=.o))
+
+INCS		=	./includes
+
+CC			=	clang
+
+FLAGS		=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+$(NAME): $(OBJS) $(GNL_OBJS)
+	@echo "[Compiling $(NAME)]"
+	@ar -rcs $(NAME) $(OBJS) $(GNL_OBJS)
+	@ranlib $(NAME)
 
-%.o: %.c
-	gcc -o $@ -c $< -Wall -Werror -Wextra -I$(INCS)
+srcs/%.o: srcs/%.c
+	@echo "[Converting $@]"
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+
+get_next_line/%.o: get_next_line/%.c
+	@echo "[Converting $@]"
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(INCS)/libft.gch
+	@echo "[Cleaning folders]"
+	@rm -f $(OBJS) $(GNL_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "[Fully cleaning folders]"
+	@rm -f $(NAME)
 
-re: fclean $(NAME)
-
-.PHONY: clean fclean re
+re: fclean all
