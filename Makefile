@@ -66,7 +66,8 @@ SRCS		=	ft_memset.c \
 				ft_putwstr.c \
 				ft_wstrlen.c \
 				ft_wstrcat.c \
-				ft_wstrdup.c
+				ft_wstrdup.c \
+				ft_wstrnew.c
 
 GNL_SRCS	=	get_next_line.c
 
