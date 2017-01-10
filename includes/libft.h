@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2017/01/10 07:34:20 by craffate         ###   ########.fr       */
+/*   Updated: 2017/01/10 07:51:36 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ char				*ft_itoa_base(int n, int b);
 void				ft_putwchar(wchar_t c);
 void				ft_putwstr(wchar_t *s);
 size_t				ft_wstrlen(const wchar_t *s);
+wchar_t				*ft_wstrcat(wchar_t *s1, const wchar_t *s2);
 
 #endif
