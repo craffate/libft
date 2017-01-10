@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wstrdup.c                                       :+:      :+:    :+:   */
+/*   ft_wcharlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/10 09:22:07 by craffate          #+#    #+#             */
-/*   Updated: 2017/01/10 15:30:27 by craffate         ###   ########.fr       */
+/*   Created: 2017/01/10 15:26:21 by craffate          #+#    #+#             */
+/*   Updated: 2017/01/10 15:29:20 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-wchar_t	*ft_wstrdup(const wchar_t *s1)
+size_t	ft_wcharlen(wchar_t c)
 {
-	unsigned int	i;
-	wchar_t			*arr;
+	size_t	i;
 
-	i = 0;
-	if (!(arr = (wchar_t *)malloc(sizeof(wchar_t) * ft_wstrlen(s1) + 1)))
-		return (NULL);
-	while (s1[i])
-	{
-		arr[i] = s1[i];
-		i++;
-	}
-	arr[i] = '\0';
-	return (arr);
+	i = 1;
+	if (c > 0x10000)
+		i += 3;
+	else if (c > 0x800)
+		i += 2;
+	else if (c > 0x80)
+		i += 1;
+	return (i);
 }
