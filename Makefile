@@ -76,9 +76,25 @@ SRCS		=	ft_memset.c \
 
 GNL_SRCS	=	get_next_line.c
 
+PF_SRCS		=	ft_printf.c \
+				ft_parse.c \
+				ft_save.c \
+				ft_is.c \
+				ft_is2.c \
+				ft_preprocess.c \
+				ft_preprocess2.c \
+				ft_process.c \
+				ft_process2.c \
+				ft_process3.c \
+				ft_colors.c \
+				ft_toolbox.c \
+				ft_toolbox2.c
+
 OBJS		=	$(addprefix srcs/, $(SRCS:.c=.o))
 
 GNL_OBJS	=	$(addprefix get_next_line/, $(GNL_SRCS:.c=.o))
+
+PF_OBJS		=	$(addprefix ft_printf/, $(PF_SRCS:.c=.o))
 
 INCS		=	./includes
 
@@ -88,9 +104,9 @@ FLAGS		=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(GNL_OBJS)
+$(NAME): $(OBJS) $(GNL_OBJS) $(PF_OBJS)
 	@echo "[Compiling $(NAME)]"
-	@ar -rcs $(NAME) $(OBJS) $(GNL_OBJS)
+	@ar -rcs $(NAME) $(OBJS) $(GNL_OBJS) $(PF_OBJS)
 	@ranlib $(NAME)
 
 srcs/%.o: srcs/%.c
@@ -101,12 +117,18 @@ get_next_line/%.o: get_next_line/%.c
 	@echo "[Converting $@]"
 	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
+ft_printf/%.o: ft_printf/%.c
+	@echo "[Converting $@]"
+	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+
 clean:
 	@echo "[Cleaning folders]"
-	@rm -f $(OBJS) $(GNL_OBJS)
+	@rm -f $(OBJS) $(GNL_OBJS) $(PF_OBJS)
 
 fclean: clean
 	@echo "[Fully cleaning folders]"
 	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean
