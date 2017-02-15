@@ -79,7 +79,8 @@ SRCS		=	ft_memset.c \
 				ft_stackswap.c \
 				ft_stackprint.c \
 				ft_stackrotate.c \
-				ft_stackrrotate.c
+				ft_stackrrotate.c \
+				ft_stackmove.c
 
 GNL_SRCS	=	get_next_line.c
 
