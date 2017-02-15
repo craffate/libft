@@ -72,7 +72,12 @@ SRCS		=	ft_memset.c \
 				ft_wstrjoin.c \
 				ft_wstrchr.c \
 				ft_wstrcmp.c \
-				ft_wstrncmp.c
+				ft_wstrncmp.c \
+				ft_stacknew.c \
+				ft_stackpush.c \
+				ft_stackpop.c \
+				ft_stackswap.c \
+				ft_stackprint.c
 
 GNL_SRCS	=	get_next_line.c
 

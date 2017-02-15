@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2017/01/12 15:44:23 by craffate         ###   ########.fr       */
+/*   Updated: 2017/02/15 10:34:50 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_stack
+{
+	int				*data;
+	size_t			head;
+	size_t			size;
+}					t_stack;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -103,5 +110,11 @@ wchar_t				*ft_wstrjoin(const wchar_t *s1, const wchar_t *s2);
 wchar_t				*ft_wstrchr(const wchar_t *s, int c);
 int					ft_wstrcmp(const wchar_t *s1, const wchar_t *s2);
 int					ft_wstrncmp(const wchar_t *s1, const wchar_t *s2, size_t i);
+t_stack				ft_stacknew(size_t size);
+void				ft_stackpush(t_stack *stack, int data);
+int					ft_stackpop(t_stack *stack);
+void				ft_stackswap(t_stack *stack);
+void				ft_stackprint(t_stack stack);
+
 
 #endif
