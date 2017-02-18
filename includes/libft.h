@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2017/02/15 18:11:36 by craffate         ###   ########.fr       */
+/*   Updated: 2017/02/18 19:00:59 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,8 @@ void				ft_stackprint(t_stack stack);
 void				ft_stackrotate(t_stack *stack);
 void				ft_stackrrotate(t_stack *stack);
 void				ft_stackmove(t_stack *a, t_stack *b);
+int					ft_stackisempty(t_stack stack);
+int					ft_stackisfull(t_stack stack);
+int					ft_stackpeek(t_stack stack);
 
 #endif
