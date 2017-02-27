@@ -6,7 +6,7 @@
 /*   By: craffate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:46:23 by craffate          #+#    #+#             */
-/*   Updated: 2017/02/24 10:07:05 by craffate         ###   ########.fr       */
+/*   Updated: 2017/02/27 10:47:38 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,5 +121,6 @@ void				ft_stackmove(t_stack *a, t_stack *b);
 int					ft_stackisempty(t_stack stack);
 int					ft_stackisfull(t_stack stack);
 int					ft_stackpeek(t_stack stack);
+int					ft_ugetchar(void);
 
 #endif
