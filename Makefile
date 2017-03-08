@@ -118,29 +118,23 @@ FLAGS		=	-Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJS) $(GNL_OBJS) $(PF_OBJS)
-	@echo "[Compiling $(NAME)]"
-	@ar -rcs $(NAME) $(OBJS) $(GNL_OBJS) $(PF_OBJS)
-	@ranlib $(NAME)
+	ar -rc $(NAME) $(OBJS) $(GNL_OBJS) $(PF_OBJS)
+	ranlib $(NAME)
 
 srcs/%.o: srcs/%.c
-	@echo "[Converting $@]"
-	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+	$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
 get_next_line/%.o: get_next_line/%.c
-	@echo "[Converting $@]"
-	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+	$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
 ft_printf/%.o: ft_printf/%.c
-	@echo "[Converting $@]"
-	@$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
+	$(CC) -o $@ -c $< $(FLAGS) -I$(INCS)
 
 clean:
-	@echo "[Cleaning folders]"
-	@rm -f $(OBJS) $(GNL_OBJS) $(PF_OBJS)
+	rm -f $(OBJS) $(GNL_OBJS) $(PF_OBJS)
 
 fclean: clean
-	@echo "[Fully cleaning folders]"
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
